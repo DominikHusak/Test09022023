@@ -1,12 +1,88 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Test09022023</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <style>
+      h1{
+          text-align: center;
+          color: white;
+      }
+      #container1{
+          background-color: darkgrey;
+      }
+      .udaje{
+          margin-top: 10px;
+          margin-bottom: 10px;
+          margin-left: 10px;
+      }
+  </style>
 </head>
-<body>
-    
-</body>
+  <body>
+    <div id="container1">
+        <h1>Autoservis Praha</h1>
+    </div>
+
+    <div id="container2">
+        <div id="container3">
+    <p>
+        <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">O nas</a>
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Kontakty</button>
+      </p>
+      <div class="row">
+        <div class="col">
+          <div class="collapse multi-collapse" id="multiCollapseExample1">
+            <div class="card card-body">
+                Mauris dolor felis, sagittis at, luctus sed, aliquam non, tellus. Proin pede metus, vulputate nec, fermentum fringilla, vehicula vitae, justo. Cras pede libero, dapibus nec, pretium sit amet, tempor quis.
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="collapse multi-collapse" id="multiCollapseExample2">
+            <div class="card card-body">
+                Etiam egestas wisi a erat. Etiam bibendum elit eget erat. Nulla est. Nullam lectus justo, vulputate eget mollis sed, tempor sed magna. In sem justo, commodo ut, suscipit at, pharetra vitae, orci.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <div id="container4">
+        <input class="udaje">Rok vyroby<br>
+        <input class="udaje">Znacka<br>
+        <input class="udaje">Model<br>
+        <input class="udaje">Najete kilometry
+      </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+    class Auto{
+            constructor(rokVyroby, znacka, model, najeteKilometry){
+                this.rokVyroby = rokVyroby;
+                this.znacka = znacka;
+                this.model = model;
+                this.najeteKilometry = najeteKilometry;
+            }
+        }
+
+        class Autoservis{
+            constructor(nazev){
+                this.autoservis = [];
+                this.nazev = nazev;
+            }
+            autaVServisu(){
+                return this.autoservis;
+            }
+            pridejAuto(auto){
+                this.autoservis.push(auto);
+            }
+            smazAuto(auto){
+                this.autoservis.pop(auto);
+            }
+        }
+    </script>
+  </body>
 </html>
