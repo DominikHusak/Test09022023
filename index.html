@@ -12,10 +12,16 @@
       }
       #container1{
           background-color: darkgrey;
+          margin-bottom: 30px;
+          padding-bottom: 30px;
       }
       .udaje{
           margin-top: 10px;
           margin-bottom: 10px;
+          margin-left: 10px;
+      }
+      #vyroba{
+          margin-top: 10px;
           margin-left: 10px;
       }
   </style>
@@ -50,10 +56,19 @@
     </div>
 
       <div id="container4">
-        <input class="udaje">Rok vyroby<br>
-        <input class="udaje">Znacka<br>
-        <input class="udaje">Model<br>
-        <input class="udaje">Najete kilometry
+        <div id="form">
+        Rok vyroby<br><input class="udaje" type="date"><br>
+        Znacka<br><input class="udaje" type="text"><br>
+        Model<br><input class="udaje" type="text"><br>
+        Najete kilometry<br><input class="udaje" type="number"><br>
+        </div>
+
+        <div id="buttons">
+        <button id="vyroba">Vyroba</button><input>
+        <button id="znacka">Znacka</button><input>
+        <button id="model">Model</button><input>
+        <button id="kilometry">Kilometry</button><input>
+        </div>
       </div>
     </div>
 
@@ -83,6 +98,14 @@
                 this.autoservis.pop(auto);
             }
         }
+
+        const vyroba = document.getElementById("vyroba");
+        const znacka = document.getElementById("znacka");
+        const model = document.getElementById("model");
+        const kilometry = document.getElementById("kilometry");
+
+        
+
     </script>
   </body>
 </html>
